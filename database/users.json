@@ -1,0 +1,50 @@
+[
+    {
+        "id": "drcevret",
+        "login": "admin",
+        "password": "crevtrvt4vb",
+        "full_name": "A A"
+    },
+    {
+        "id": "c8c31ac3-5a76-4a6c-9b80-436e6249f4ba",
+        "login": "test",
+        "password": "$2b$10$oz7a.5HXgszrRoc3w./F0uX7c5llqMrfqQA7ehtGsJ.BQTG9fg7KW",
+        "full_name": "test"
+    },
+    {
+        "id": "3ad6d127-e70c-4b2e-a148-1b5d3b73baf3",
+        "login": "test1",
+        "password": "$2b$10$bAkn9Sxho2Xm5NbXams0Su5SG5X2MOZtOB8lMJujmhf1lhl/9Hgje",
+        "full_name": "test1"
+    },
+    {
+        "id": "91a6bef6-bcba-4aa0-b116-aa9b0456c3dd",
+        "login": "test3",
+        "password": "$2b$10$WOmKtsHNGzS9lgTs1umHnunbA7pSY0HV7A2Xz4fHBXPTESB712iXS",
+        "full_name": "test 4 234"
+    },
+    {
+        "id": "6911aaef-d72c-405a-b64a-26214f7fb837",
+        "login": "oko",
+        "password": "$2b$10$CioKXaJr./WdRt4tHhS1XeLyatc5/yt7wW/NsowIbJQXk90PPEJBO",
+        "full_name": "oko"
+    },
+    {
+        "id": "f6de0fd9-2e55-4b2d-b51a-cec3a9252c64",
+        "login": "ujj",
+        "password": "$2b$10$bmoq81t1JD.kufhFDF./IeA2t/mosp8uEDncYq7YoYvy6LcZCUxt2",
+        "full_name": "ujj"
+    },
+    {
+        "id": "1fba7a74-4523-4e4f-9b9f-fcf2131477a6",
+        "login": "qqqq",
+        "password": "$2b$10$7f1uhPewdEjYSs2DEJyH8eSHYLX0kQ6Rf3toLh1eYEiUJHVtqXqoC",
+        "full_name": "qqqq"
+    },
+    {
+        "id": "f4b70ea8-856e-4cab-9930-2bdfabacd896",
+        "login": "ttttt",
+        "password": "$2b$10$szed76VTeyYKtgd9DfXRkOtxJZoek1lHln2l0jcfvCArciJygSaUG",
+        "full_name": "ttttt"
+    }
+]

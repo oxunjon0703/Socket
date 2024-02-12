@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>online users count: <b id="online-users">0</b></h1>
+   <div>
+    <p>login: <%= data.currentUser.login%></p>
+    <p>fullName :<%= data.currentUser.full_name%></p>
+   </div>
+
+
+    <a href="/register">register</a>
+
+    <% if(data.isVisible){ %>
+        <h5> <%= data.message %> </h5>
+        
+        <ol id="user-box">
+            <% data.users?.forEach(user=>{ %>
+                <li> 
+                    <p>Login: <b><%= user.login %></b></p>    
+                    <p>Full Name: <b><%= user.full_name %></b></p>    
+                </li>
+            <% }) %>
+        </ol>
+    <% } %>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+
+const OLUserBox = document.getElementById('user-box');
+const getToken = getCookieValue("token")
+const creatEl = (tag) => document.createElement(tag);
+
+        const socket = io("http://localhost:7777", {
+            query: { authorization: getToken },
+        })
+
+socket.on("online-users-count", (data)=>{
+    const BOnlineUser = document.getElementById('online-users');
+
+    BOnlineUser.innerHTML = data
+})
+
+socket.on("new-user", (data)=>{
+    const newLiBox = creatEl("li");
+  const newP1 = creatEl("p");
+  const newP2 = creatEl("p");
+  const newB1 = creatEl("b");
+  const newB2 = creatEl("b");
+
+  newB1.textContent = data.login
+  newB2.textContent = data.full_name
+
+  newP1.append(newB1)
+  newP2.append(newB2)
+  newLiBox.append(newP1,newP2)
+
+
+
+    OLUserBox.append(newLiBox)
+
+
+})
+
+
+
+
+
+
+
+
+        function getCookieValue(name) {
+  const cookies = document.cookie.split(';').map(cookie => cookie.trim());
+  for (const cookie of cookies) {
+    const [cookieName, cookieValue] = cookie.split('=');
+    if (cookieName === name) {
+      return decodeURIComponent(cookieValue);
+    }
+  }
+  return null;
+}
+    </script>
+</body>
+</html>

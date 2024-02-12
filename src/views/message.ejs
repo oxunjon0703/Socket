@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1>Message</h1>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+
+const OLMessageBox = document.getElementById('message-box');
+const getToken = getCookieValue("token")
+const creatEl = (tag) => document.createElement(tag);
+
+        const socket = io("http://localhost:7777", {
+            query: { authorization: getToken },
+        })
+
+
+
+
+
+
+
+
+
+
+        function getCookieValue(name) {
+  const cookies = document.cookie.split(';').map(cookie => cookie.trim());
+  for (const cookie of cookies) {
+    const [cookieName, cookieValue] = cookie.split('=');
+    if (cookieName === name) {
+      return decodeURIComponent(cookieValue);
+    }
+  }
+  return null;
+}
+    </script>
+</body>
+</html>

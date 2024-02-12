@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <a href="/">index</a>
+
+    <h1>Register</h1>
+
+    <% if(data.isVisible){ %>
+        <h4> ERROR: <%= data.message %> </h4>
+    <% } %>
+
+    <form action="/api/user/register" method="post" >
+        <input type="text" required placeholder="login" name="login">
+        <input type="text" required placeholder="Full Name" name="fullName">
+        <input type="password" required placeholder="Password" name="password">
+        <input type="password" required placeholder="Repeat Password" name="comparePassword">
+        <button type="submit">Register</button>
+    </form>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io()
+    </script>
+</body>
+</html>
